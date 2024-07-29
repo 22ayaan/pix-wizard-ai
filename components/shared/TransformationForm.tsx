@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useTransition } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 
 import { z } from "zod";
 
@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import {
   aspectRatioOptions,
+  creditFee,
   defaultValues,
   transformationStates,
   transformationTypes,
@@ -40,6 +41,8 @@ import TransformedImage from "./TransformedImage";
 import { getCldImageUrl } from "next-cloudinary";
 import { addImage, updateImage } from "@/lib/actions/image.actions";
 import { useRouter } from "next/navigation";
+import { InsufficientCreditsModal } from "./InsufficientCreditsModal";
+import { useToast } from "../ui/use-toast";
 
 export const formSchema = z.object({
   title: z.string(),
@@ -70,6 +73,8 @@ const TransformationForm = ({
   const [isPending, startTransition] = useTransition();
 
   const router = useRouter();
+
+  const { toast }: any = useToast();
 
   const initialValues =
     data && action === "Update"
@@ -189,7 +194,6 @@ const TransformationForm = ({
     }, 1000);
   };
 
-  // TODO: Update Credit fee to something else
   const onTransformHandler = async () => {
     setIsTransforming(true);
 
@@ -200,13 +204,27 @@ const TransformationForm = ({
     setNewTransformation(null);
 
     startTransition(async () => {
-      await updateCredits(userId, -1);
+      await updateCredits(userId, creditFee);
+    });
+
+    toast({
+      title: "Image Transforming...",
+      description: "1 credit deducted from your account.",
+      duration: 5000,
+      className: "success-toast",
     });
   };
+
+  useEffect(() => {
+    if (image && (type === "restore" || type === "removeBackground")) {
+      setNewTransformation(transformationType.config);
+    }
+  }, [image, transformationType.config, type]);
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
         <CustomField
           control={form.control}
           name="title"

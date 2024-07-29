@@ -21,7 +21,7 @@ const MediaUploader = ({
   publicId,
   type,
 }: MediaUploaderProps) => {
-  const { toast } = useToast();
+  const { toast }: any = useToast();
 
   const onUploadSuccessHandler = (result: any) => {
     setImage((prevState: any) => ({
@@ -36,7 +36,8 @@ const MediaUploader = ({
 
     toast({
       title: "Image uploaded successfully",
-      description: "1 credit was deducted from your account",
+      description:
+        "1 credit will be deducted from your account when you transform the image.",
       duration: 5000,
       className: "success-toast",
     });
