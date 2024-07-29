@@ -175,12 +175,12 @@ export const transformationStates = {
     actionLabel: "Apply Generative Fill",
   },
   remove: {
-    processingLabel: "Removing Object...",
-    actionLabel: "Remove Object",
+    processingLabel: "Removing Objects...",
+    actionLabel: "Remove Objects",
   },
   recolor: {
-    processingLabel: "Recoloring Object...",
-    actionLabel: "Recolor Object",
+    processingLabel: "Recoloring Objects...",
+    actionLabel: "Recolor Objects",
   },
 };
 
