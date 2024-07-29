@@ -1,41 +1,49 @@
 export const navLinks = [
   {
     label: "Home",
+    spell: "home",
     route: "/",
     icon: "/assets/icons/home.svg",
   },
   {
     label: "Image Restore",
+    spell: "Reparo Your Images",
     route: "/transformations/add/restore",
     icon: "/assets/icons/image.svg",
   },
   {
     label: "Generative Fill",
+    spell: "Wingardium Filliosa",
     route: "/transformations/add/fill",
     icon: "/assets/icons/stars.svg",
   },
   {
     label: "Object Remove",
+    spell: "Obliviate Imperfections",
     route: "/transformations/add/remove",
     icon: "/assets/icons/scan.svg",
   },
   {
     label: "Object Recolor",
+    spell: "Lumos Your Pictures",
     route: "/transformations/add/recolor",
     icon: "/assets/icons/filter.svg",
   },
   {
     label: "Background Remove",
+    spell: "Evanesco Blur",
     route: "/transformations/add/removeBackground",
     icon: "/assets/icons/camera.svg",
   },
   {
     label: "Profile",
+    spell: "profile",
     route: "/profile",
     icon: "/assets/icons/profile.svg",
   },
   {
     label: "Buy Credits",
+    spell: "money",
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
