@@ -161,6 +161,29 @@ export const transformationTypes = {
   },
 };
 
+export const transformationStates = {
+  restore: {
+    processingLabel: "Restoring...",
+    actionLabel: "Restore Image",
+  },
+  removeBackground: {
+    processingLabel: "Removing Background...",
+    actionLabel: "Remove Background",
+  },
+  fill: {
+    processingLabel: "Filling Image...",
+    actionLabel: "Apply Generative Fill",
+  },
+  remove: {
+    processingLabel: "Removing Object...",
+    actionLabel: "Remove Object",
+  },
+  recolor: {
+    processingLabel: "Recoloring Object...",
+    actionLabel: "Recolor Object",
+  },
+};
+
 export const aspectRatioOptions = {
   "1:1": {
     aspectRatio: "1:1",
