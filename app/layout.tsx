@@ -29,9 +29,6 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <head>
-          <link rel="icon" href="/assets/images/Wizard.png" sizes="any" />
-        </head>
         <body className={cn("font-monsterrat antialiased", montserrat.variable)}>
           {children}
         </body>

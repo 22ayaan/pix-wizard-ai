@@ -55,10 +55,16 @@ export const plans = [
     name: "Free",
     icon: "/assets/icons/free-plan.svg",
     price: 0,
-    credits: 20,
+    credits: 50,
+    discount: {
+      isDiscounted: false,
+      discountedPrice: 0,
+    },
+    mostPopular: false,
+    bestValue: false,
     inclusions: [
       {
-        label: "20 Free Credits",
+        label: "50 Free Credits",
         isIncluded: true,
       },
       {
@@ -79,8 +85,14 @@ export const plans = [
     _id: 2,
     name: "Pro Package",
     icon: "/assets/icons/free-plan.svg",
-    price: 0.99,
+    price: 3.99,
     credits: 120,
+    bestValue: false,
+    discount: {
+      isDiscounted: true,
+      discountedPrice: 0.99,
+    },
+    mostPopular: true,
     inclusions: [
       {
         label: "120 Credits",
@@ -104,11 +116,17 @@ export const plans = [
     _id: 3,
     name: "Premium Package",
     icon: "/assets/icons/free-plan.svg",
-    price: 4.99,
-    credits: 2000,
+    price: 9.99,
+    credits: 1000,
+    discount: {
+      isDiscounted: true,
+      discountedPrice: 5.99,
+    },
+    bestValue: true,
+    mostPopular: false,
     inclusions: [
       {
-        label: "2000 Credits",
+        label: "1000 Credits",
         isIncluded: true,
       },
       {
@@ -221,4 +239,4 @@ export const defaultValues = {
   publicId: "",
 };
 
-export const creditFee = -1;
+export const creditFee = -10;

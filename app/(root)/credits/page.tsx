@@ -25,11 +25,42 @@ const Credits = async () => {
       <section>
         <ul className="credits-list">
           {plans.map((plan) => (
-            <li key={plan.name} className="credits-item">
+            <li
+              key={plan.name}
+              className={`relative credits-item ${
+                plan.mostPopular ? "md:scale-110 scale-100 md:my-0 my-3" : ""
+              }`}
+            >
               <div className="flex-center flex-col gap-3">
+                {plan.bestValue && (
+                  <p
+                    className="p-16-semibold absolute top-0 bg-purple-500 text-white 
+                    px-3 py-0.5 tracking-wide rounded-full shadow-md -translate-y-1/2"
+                  >
+                    Best Value
+                  </p>
+                )}
+                {plan.mostPopular && (
+                  <p
+                    className="p-16-semibold absolute top-0 bg-purple-500 text-white 
+                    px-3 py-0.5 tracking-wide rounded-full shadow-md -translate-y-1/2"
+                  >
+                    Most Popular
+                  </p>
+                )}
                 <Image src={plan.icon} alt="check" width={50} height={50} />
                 <p className="p-20-semibold mt-2 text-purple-500">{plan.name}</p>
-                <p className="h1-semibold text-dark-600">${plan.price}</p>
+                <span>
+                  {plan.discount.isDiscounted && (
+                    <p className="inline h3-bold text-dark-400 line-through">
+                      ${plan.price}
+                    </p>
+                  )}{" "}
+                  <p className="inline h1-semibold text-dark-600">
+                    ${plan.discount.discountedPrice}
+                  </p>
+                </span>
+
                 <p className="p-16-regular">{plan.credits} Credits</p>
               </div>
 
