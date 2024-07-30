@@ -174,11 +174,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ### Credits Pucrhase Page:
 
-<img width="1440" alt="Screenshot 2024-07-30 at 4 15 11 PM" src="https://github.com/user-attachments/assets/eb21e9bc-dcdd-4220-a5b5-81ee2819ab50">
+<img width="1440" alt="8" src="https://github.com/user-attachments/assets/0ef013a1-34de-4fe5-95a1-7e90d2db3f74">
+
 
 ### Stripe Payment Page:
 
-<img width="1440" alt="Screenshot 2024-07-30 at 4 15 36 PM" src="https://github.com/user-attachments/assets/3bc11f3f-bb3b-4e5c-8587-7c0d9dd35995">
+<img width="1440" alt="9" src="https://github.com/user-attachments/assets/d4f516f0-fd28-4e32-a4cd-b2a4261e6aef">
 
 ### Clerk Sign-in Page:
 
