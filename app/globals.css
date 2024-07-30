@@ -220,7 +220,7 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center h-[70vh] flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-center sm:bg-left-bottom bg-no-repeat p-10 shadow-inner;
+    @apply sm:flex-center h-[80vh] flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-center sm:bg-left-bottom bg-no-repeat p-10 shadow-inner;
   }
 
   .home-heading {
