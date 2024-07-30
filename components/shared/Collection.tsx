@@ -51,7 +51,9 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-dark-600">Recent Edits</h2>
+        <h2 className="h2-bold text-dark-600">
+          {communityEdits ? "Community Edits" : "Your Edits"}
+        </h2>
         {hasSearch && <Search />}
       </div>
 
