@@ -2,6 +2,7 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -62,18 +63,20 @@ const MobileNav = () => {
                           isActive && "gradient-text"
                         } p-18 flex whitespace-nowrap text-dark-700`}
                       >
-                        <Link
-                          className="sidebar-link cursor-pointer"
-                          href={navLink.route}
-                        >
-                          <Image
-                            src={navLink.icon}
-                            alt="logo"
-                            width={24}
-                            height={24}
-                          />
-                          {navLink.label}
-                        </Link>
+                        <SheetClose asChild>
+                          <Link
+                            className="sidebar-link cursor-pointer"
+                            href={navLink.route}
+                          >
+                            <Image
+                              src={navLink.icon}
+                              alt="logo"
+                              width={24}
+                              height={24}
+                            />
+                            {navLink.label}
+                          </Link>
+                        </SheetClose>
                       </li>
                     );
                   })}
