@@ -24,7 +24,7 @@ export const Collection = ({
   images,
   totalPages = 1,
   page,
-  communityEdits = true,
+  communityEdits = false,
 }: {
   images: IImage[];
   totalPages?: number;
@@ -51,23 +51,19 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-dark-600">
-          {communityEdits ? "Community Edits" : "Your Edits"}
-        </h2>
+        <h2 className="h2-bold text-dark-600">Recent Edits</h2>
         {hasSearch && <Search />}
       </div>
 
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            <Card image={image} key={image._id} />
+            <Card image={image} key={image.publicId} />
           ))}
         </ul>
       ) : (
         <div className="collection-empty">
-          <p className="p-20-semibold">
-            There is nothing in your collections. Start your journey now!
-          </p>
+          <p className="p-20-semibold">Empty List</p>
         </div>
       )}
 
