@@ -55,6 +55,7 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
           images={images?.data}
           totalPages={images?.totalPages}
           page={page}
+          communityEdits={false}
         />
       </section>
     </>

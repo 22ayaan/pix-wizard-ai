@@ -42,6 +42,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
             images={images?.data}
             totalPages={images?.totalPages}
             page={page}
+            communityEdits={true}
           />
         </section>
       </SignedIn>

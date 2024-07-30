@@ -24,11 +24,13 @@ export const Collection = ({
   images,
   totalPages = 1,
   page,
+  communityEdits = true,
 }: {
   images: IImage[];
   totalPages?: number;
   page: number;
   hasSearch?: boolean;
+  communityEdits?: boolean;
 }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -49,7 +51,9 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-dark-600">Recent Edits</h2>
+        <h2 className="h2-bold text-dark-600">
+          {communityEdits ? "Community Edits" : "Your Edits"}
+        </h2>
         {hasSearch && <Search />}
       </div>
 
