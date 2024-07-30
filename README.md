@@ -16,7 +16,7 @@
   <h3 align="center">Pixel Wizard (PixWiz) sn AI SaaS Platform</h3>
 
    <div align="center">
-     Check out <a href="https://pixwiz.vercel.app/" target="_blank" >PixWiz<a/>
+     Check out <a href="https://pixwiz.vercel.app/" target="_blank" >PixWiz</a>>
     </div>
 </div>
 
