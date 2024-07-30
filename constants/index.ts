@@ -31,7 +31,7 @@ export const navLinks = [
   },
   {
     label: "Background Remove",
-    spell: "Evanesco Blur",
+    spell: "Evanesco Blur Background",
     route: "/transformations/add/removeBackground",
     icon: "/assets/icons/camera.svg",
   },
