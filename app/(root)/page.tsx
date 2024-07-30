@@ -16,7 +16,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
     <>
       <section className="home">
         <h1 className="home-heading">Turning Pixels into Wizardry</h1>
-        <ul className="flex-center w-full xl:gap-20 md:gap-10 gap-4 flex-wrap lg:flex-nowrap mt-20">
+        <ul className="flex-center w-full xl:gap-20 gap-10 flex-wrap lg:flex-nowrap mt-20">
           {navLinks.slice(1, 6).map((navLink) => (
             <Link
               key={navLink.route}
